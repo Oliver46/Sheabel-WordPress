@@ -1,0 +1,39 @@
+/* footer */
+.uppercase {
+    text-transform: uppercase;
+}
+footer{
+    margin: auto;
+    background: $secondaryColor;
+    padding: 70px 0;
+    color: $white;
+}
+footer .footer-left-side {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+footer .footer-left-side .footer-address {
+    margin: auto;
+    width: 250px;
+    text-transform: uppercase;
+}
+
+footer ul.footer li {
+    font-size: 18px;
+    line-height: 200%;
+}
+
+footer ul.footer li.current-menu-item a {
+    color: $white;
+}
+
+footer ul.footer li a {
+    color:$red;
+    text-decoration: none;
+}
+
+footer ul.footer li a:hover{
+    color:$white;
+}

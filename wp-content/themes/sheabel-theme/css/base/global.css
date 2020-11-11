@@ -1,0 +1,29 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+	list-style-type:none;
+}
+
+.wrapper-container {
+    padding: 20px;
+}
+
+.black {
+	color: $black;
+}
+
+.white {
+	color: $white;
+}
+
+/* Table */
+.table th, .table td { 
+	color: $white;
+	border-top: none; 
+}

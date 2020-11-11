@@ -1,0 +1,42 @@
+/* about columns */
+.about-columns .box,  .history-columns .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+ }
+
+ .about-columns .box img {
+    width: 200px;
+    height: 200px !important;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 2px solid #0B3F57;
+ }
+
+ .about-columns .box .textwidget p{
+     color: #0b3f57;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 150%;
+ }
+
+ /* history columns */
+ .history-columns .box img {
+    width: 200px;
+    height: 200px !important;
+    border-radius: 50%;
+    margin: 20px 0;
+    border: 2px solid #FFF;
+ }
+ .history-columns .box .textwidget p {
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 150%;
+     color: #FFF;
+     text-shadow: 1px 1px 5px #000;
+ }
+
+ /* End of About and History */

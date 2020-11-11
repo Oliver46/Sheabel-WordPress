@@ -1,0 +1,20 @@
+.main-image{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+}
+
+#history, #contact, #services {
+	background-attachment: fixed;
+	/* background-color: $primaryColor; */
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat:no-repeat;
+}

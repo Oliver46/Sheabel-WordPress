@@ -1,0 +1,26 @@
+.weather h1 {
+    color: #0B3F57;
+}
+
+.weather-plugin-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#renderWeather {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid red;
+}
+table {
+    width: 100%;
+}
+
+.table tbody td, .table tbody {
+    padding: .75rem;
+}
+
+
+
+

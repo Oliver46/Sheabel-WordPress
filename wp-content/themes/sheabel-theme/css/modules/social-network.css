@@ -1,0 +1,13 @@
+.social-network {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .social-icons {
+        padding: 0px 10px;
+        a {
+            cursor: pointer;
+            color: $white;
+        }
+    }
+}

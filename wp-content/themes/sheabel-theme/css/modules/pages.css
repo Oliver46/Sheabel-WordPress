@@ -1,0 +1,48 @@
+/* pages */
+
+
+.page-title {
+	margin: auto;
+	padding: 40px;
+	color: $red;
+	text-transform: uppercase;
+}
+
+.content{
+	margin: auto;
+    padding:0px 40px;
+}    
+.content .content_title_wrapper{
+		padding: 0 10px 20px;
+	}
+.content.content_content_wrapper {
+		margin: auto;
+		
+        max-width: 70%;
+}       
+.content .content_content_wrapper p {
+			font-size: 24px;
+			letter-spacing: 1.7px;
+			line-height: 200%;
+            color: $primaryColor;
+            padding: 20px 20px 20px;
+}
+.content h3 {
+		font-family: 'Raleway', sans-serif;
+		font-size: 36px;
+		text-align: center;
+		letter-spacing: 2px;
+		font-weight: 500;
+        line-height: 150%;
+}
+	
+.row-two-blue {
+	background: $primaryColor;
+    padding: 40px 0px;
+}
+.row-two-blue .box .box-title {
+			color: $white;
+			background: $red;
+			padding: 5px 0;
+
+}

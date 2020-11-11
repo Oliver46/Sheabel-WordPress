@@ -1,0 +1,26 @@
+class SocialNetwork{
+    //function __construct(){}
+    //Methods
+    function activate(){
+    //generated a CPT
+    //flush rewrite rules    
+    }
+    function deactivate(){
+    //flush rewrite rules 
+    }
+    function uninstall(){
+    //delete CPT  
+    //Delete all the plugin data from the DB  
+    }
+}
+
+if(class_exists('SocialNetwork')) {
+    $socialNetworkPlugin = new SocialNetwork( );
+}
+
+//activation
+register_activation_hook(__FILE__, array($socialNetworkPlugin, 'activate')); //same as add_action
+//deactivation
+register_deactivation_hook(__FILE__, array($socialNetworkPlugin, 'deactivate')); 
+
+//uninstall
