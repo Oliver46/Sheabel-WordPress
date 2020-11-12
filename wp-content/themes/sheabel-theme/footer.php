@@ -3,7 +3,7 @@
             <div class="row text-center footer-left-side">
                 <div class="col-lg copyright">
                   
-                    <h5 class="uppercase">COPYRIGHT © 2016- <?php echo Date('Y')?> <?php (bloginfo('description')); ?></h5>
+                    <h5 class="uppercase">COPYRIGHT © 2016- <?php echo Date('Y')?><br><?php (bloginfo('description')); ?></h5>
                     <div class="footer-address">
                         <p><?php echo get_theme_mod('contact_address', '5950 Cedarcreek Ln'); ?><br>
                         <?php echo get_theme_mod('contact_city', '5950 Cedarcreek Ln'); ?> <?php echo get_theme_mod('contact_state', 'Kentucky'); ?> <?php echo get_theme_mod('contact_city_zip_code', '40515'); ?></p>

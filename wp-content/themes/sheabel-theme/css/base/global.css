@@ -22,6 +22,10 @@ ul {
 	color: $white;
 }
 
+.container.row-one {
+	margin-top:150px;
+}
+
 /* Table */
 .table th, .table td { 
 	color: $white;

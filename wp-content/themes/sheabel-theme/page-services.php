@@ -1,7 +1,7 @@
 <?php /* Template Name: services */?>
 <?php get_header(); ?>
 <!-- services -->
-<section id="services" style="background-image:url('<?php echo get_template_directory_uri() . "/image/history_sheabel_bg.png" ?>')">   
+<section id="services" style="background-image:url('<?php $pageBackground = get_field('page_background_image'); echo $pageBackground['sizes']['pageBackground'] ?>">   
 
 <div class="wrapper-container">
 
@@ -79,28 +79,30 @@ endif;
             <h1>Gallery</h1>
         </div>
     </div>
+
     <div class="row">
         <div class="gallery-container">
             <div class="container-gallery">
                 <div class="box-gallery">
-                  <img src="https://img1.wsimg.com/isteam/ip/08a9676f-7925-41c8-b34e-20623acdee4f/IMG_4037-0001.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1300,h:800">
-                  <span class="caption">Sheabel</span>
+                  <img src="<?php echo get_theme_mod('gallery_img1', get_bloginfo('template_url') . '/image/sheabel_gallery_img1.png');?>">
+                  <span class="caption"><?php echo get_theme_mod('gallery_text1', 'Sheabel');?></span>
                 </div>
                 <div class="box-gallery">
-                  <img src="https://img1.wsimg.com/isteam/ip/08a9676f-7925-41c8-b34e-20623acdee4f/IMG_4049-0001.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1300,h:800">
-                  <span class="caption">Pet</span>
+                  <img src="<?php echo get_theme_mod('gallery_img2', get_bloginfo('template_url') . '/image/sheabel_gallery_img2.png');?>">
+                  <span class="caption"><?php echo get_theme_mod('gallery_text2', 'Pet');?></span>
                 </div>
                 <div class="box-gallery">
-                  <img src="https://img1.wsimg.com/isteam/ip/08a9676f-7925-41c8-b34e-20623acdee4f/IMG_4044.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1300,h:800">
-                  <span class="caption">Cemetery</span>
+                  <img src="<?php echo get_theme_mod('gallery_img3', get_bloginfo('template_url') . '/image/sheabel_gallery_img3.png');?>">
+                  <span class="caption"><?php echo get_theme_mod('gallery_text3', 'Cemetery');?></span>
                 </div>
                 <div class="box-gallery">
-                  <img src="https://img1.wsimg.com/isteam/ip/08a9676f-7925-41c8-b34e-20623acdee4f/IMG_4041.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1300,h:800">
-                  <span class="caption">Kentucky</span>
+                  <img src="<?php echo get_theme_mod('gallery_img4', get_bloginfo('template_url') . '/image/sheabel_gallery_img4.png');?>">
+                  <span class="caption"><?php echo get_theme_mod('gallery_text4', 'Kentucky');?></span>
                 </div>
               </div>
         </div>
     </div>
+
 </div>
 </section>
 <?php get_footer(); ?>

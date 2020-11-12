@@ -262,12 +262,195 @@ function sheabel_customize_register($wp_customize){
         'section' => 'opening_hours',
         'priority' => 7
     ));
+
+        //Gallery Section
+        $wp_customize->add_section('gallery', array(
+            'title' => __('Gallery', 'sheabel-theme'),
+            'description' => sprintf(__('Options for Home', 'sheabel-theme')),
+            'priority' => 136
+        ));
+    
+        //Gallery Image 1
+        $wp_customize->add_setting('gallery_img1', array(
+            'default' => _x(get_bloginfo('template_directory') . '/image/sheabel_gallery_img1.png', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gallery_img1', array(
+            'label' => __('Image 1', 'sheabel-theme'),
+            'section' => 'gallery',
+            'settings' => 'gallery_img1',
+            'priority' => 1
+        )));
+
+        //Image 1 Text
+        $wp_customize->add_setting('gallery_text1', array(
+            'default' => _x('Sheabel', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('gallery_text1', array(
+            'label' => __('Text Image 1', 'sheabel-theme'),
+            'section' => 'gallery',
+            'priority' => 2
+        ));
+
+        //Gallery Image 2
+        $wp_customize->add_setting('gallery_img2', array(
+            'default' => _x(get_bloginfo('template_directory') . '/image/sheabel_gallery_img2.png', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gallery_img2', array(
+            'label' => __('Image 2', 'sheabel-theme'),
+            'section' => 'gallery',
+            'settings' => 'gallery_img2',
+            'priority' => 3
+        )));
+
+        //Image 2 Text
+        $wp_customize->add_setting('gallery_text2', array(
+            'default' => _x('Pet', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('gallery_text2', array(
+            'label' => __('Text Image 2', 'sheabel-theme'),
+            'section' => 'gallery',
+            'priority' => 4
+        ));
+
+        //Gallery Image 3
+        $wp_customize->add_setting('gallery_img3', array(
+            'default' => _x(get_bloginfo('template_directory') . '/image/sheabel_gallery_img3.png', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gallery_img3', array(
+            'label' => __('Image 3', 'sheabel-theme'),
+            'section' => 'gallery',
+            'settings' => 'gallery_img3',
+            'priority' => 5
+        )));
+
+    
+
+        //Image 3 Text
+        $wp_customize->add_setting('gallery_text3', array(
+            'default' => _x('Cemetery', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('gallery_text3', array(
+            'label' => __('Text Image 3', 'sheabel-theme'),
+            'section' => 'gallery',
+            'priority' => 6
+        ));
+
+        //Gallery Image 4
+        $wp_customize->add_setting('gallery_img4', array(
+            'default' => _x(get_bloginfo('template_directory') . '/image/sheabel_gallery_img4.png', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'gallery_img4', array(
+            'label' => __('Image 4', 'sheabel-theme'),
+            'section' => 'gallery',
+            'settings' => 'gallery_img4',
+            'priority' => 7
+        )));
+
+        //Image 4 Text
+        $wp_customize->add_setting('gallery_text4', array(
+            'default' => _x('Kentucky', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+        $wp_customize->add_control('gallery_text4', array(
+            'label' => __('Text Image 4', 'sheabel-theme'),
+            'section' => 'gallery',
+            'priority' => 8
+        ));
+
+        //FAQ Section
+        $wp_customize->add_section('faq', array(
+            'title' => __('FAQ', 'sheabel-theme'),
+            'description' => sprintf(__('Options for FAQ', 'sheabel-theme')),
+            'priority' => 136
+        ));
+
+        //FAQ question #1
+        $wp_customize->add_setting('faq_question1', array(
+            'default' => _x('Are you running out of land for burials?', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('faq_question1', array(
+            'label' => __('Question #1', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 1
+        ));
+
+        //FAQ answer #1
+        $wp_customize->add_setting('faq_answer1', array(
+            'default' => _x('No. Sheabel Pet Cemetery has more than adequate land for burials well into the future.', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('faq_answer1', array(
+            'type' => 'textarea',
+            'label' => __('Answer #1', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 2
+        ));
+
+        //FAQ question #2
+        $wp_customize->add_setting('faq_question2', array(
+            'default' => _x(' Do you only bury dogs?', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('faq_question2', array(
+            'label' => __('Question #2', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 3
+        ));
+
+        //FAQ answer #2
+        $wp_customize->add_setting('faq_answer2', array(
+            'default' => _x('Although dogs and cats are the most prevalent species of animals attended to at Sheabel Pet Cemetery, other pets, including birds, reptiles are among those represented.', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('faq_answer2', array(
+            'type' => 'textarea',
+            'label' => __('Answer #2', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 4
+        ));
+
+        //FAQ question #3
+        $wp_customize->add_setting('faq_question3', array(
+            'default' => _x(' What Should I do if my pet dies at home? ', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('faq_question3', array(
+            'label' => __('Question #3', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 5
+        ));
+
+        //FAQ answer #2
+        $wp_customize->add_setting('faq_answer3', array(
+            'default' => _x('Until decisions and preparations can be made, place your pet in the coldest part of your home.  Put plastic down and then newspaper or a blanket to place your pet on.  Cover with another towel or blanket.', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('faq_answer3', array(
+            'type' => 'textarea',
+            'label' => __('Answer #3', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 6
+        ));
+
+ 
  
  
  
 
-
-        
 
 }
 add_action('customize_register', 'sheabel_customize_register');

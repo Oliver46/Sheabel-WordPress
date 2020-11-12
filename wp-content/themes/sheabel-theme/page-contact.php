@@ -2,8 +2,8 @@
 <?php get_header(); ?>   
    <!-- contact -->
 
-   <section id="contact" style="background-image:url('<?php echo get_template_directory_uri() . "/image/history_sheabel_bg.png" ?>')">
-        
+   <section id="contact" style="background-image:url('<?php $pageBackground = get_field('page_background_image'); echo $pageBackground['sizes']['pageBackground'];   ?>')">
+        <?php  //print_r($pageBackground);?>
         <div class="wrapper-container">
 
         <?php if(have_posts()) :
@@ -69,6 +69,7 @@
             </div>
     <?php 
         }
+       
     ?>
     </div>
 

@@ -12,8 +12,8 @@ function sheabel_files() {
     wp_enqueue_script('main-sheabel-wp-js', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   }else{
     wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/undefined'), NULL, '1.0', true);
-    wp_enqueue_script('main-sheabel-wp-js', get_theme_file_uri('/bundled-assets/scripts.5cdae0d575b8892ee84b.js'), NULL, '1.0', true);
-    wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.5cdae0d575b8892ee84b.css'));
+    wp_enqueue_script('main-sheabel-wp-js', get_theme_file_uri('/bundled-assets/scripts.a4e6daa8fcb25651f48c.js'), NULL, '1.0', true);
+    wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.a4e6daa8fcb25651f48c.css'));
 }
   
   //wp_enqueue_script('main-js', get_theme_file_uri('/js/modules/GoogleMap.js'), NULL, '1.0', true); //Google Map js file
@@ -31,6 +31,15 @@ function sheabel_theme_setup(){
     'footer_menu' => __('Footer Menu')
   ));
 
+  add_theme_support('post-thumbnails'); // WPFeature image | WP thumbnail image
+  add_image_size('pageBackground','1920', '525', true); //ACF background image
+
+  add_image_size('historyBackground', '1920', '860', true); // Create my own size for History background image
+
+  //Plugin generate Thumbnails by alex Mills
+  //After Installing and activating go to tools -> Regenerate Thumbnails
+
+  //Plugin Manual Image Crop Tomasz Sita: it is used to crop images
   
 }
 add_action('after_setup_theme', 'sheabel_theme_setup');
