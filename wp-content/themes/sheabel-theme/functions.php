@@ -12,8 +12,8 @@ function sheabel_files() {
     wp_enqueue_script('main-sheabel-wp-js', 'http://localhost:3000/bundled.js', NULL, '1.0', true);
   }else{
     wp_enqueue_script('our-vendors-js', get_theme_file_uri('/bundled-assets/undefined'), NULL, '1.0', true);
-    wp_enqueue_script('main-sheabel-wp-js', get_theme_file_uri('/bundled-assets/scripts.9a008b02a3afc374ead4.js'), NULL, '1.0', true);
-    wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.9a008b02a3afc374ead4.css'));
+    wp_enqueue_script('main-sheabel-wp-js', get_theme_file_uri('/bundled-assets/scripts.b34ada33cd86dc15a2b3.js'), NULL, '1.0', true);
+    wp_enqueue_style('our-main-styles', get_theme_file_uri('/bundled-assets/styles.b34ada33cd86dc15a2b3.css'));
 }
   
   //wp_enqueue_script('main-js', get_theme_file_uri('/js/modules/GoogleMap.js'), NULL, '1.0', true); //Google Map js file
