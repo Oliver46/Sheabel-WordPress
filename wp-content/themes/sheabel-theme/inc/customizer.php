@@ -1,21 +1,23 @@
 <?php
 //Theme Customizer | Settings
 function sheabel_customize_register($wp_customize){
-    //Home Section
+
+    //Home Section | Group controllers
     $wp_customize->add_section('home', array(
         'title' => __('Home', 'sheabel-theme'),
         'description' => sprintf(__('Options for Home', 'sheabel-theme')),
         'priority' => 130
     ));
 
-    //Home Long Title
+    //Home Long Title | store data in db
     $wp_customize->add_setting('home_text', array(
         'default' => _x('', 'sheabel-theme'),
         'type' => 'theme_mod'
     ));
+    //Create input field | It is asigned under a section and control
     $wp_customize->add_control('home_text', array(
         'type' => 'textarea',
-        'label' => __('Home Page Text', 'sheabel-theme'),
+        'label' => __('Home Page Paragraph', 'sheabel-theme'),
         'section' => 'home',
         'priority' => 1
     ));
@@ -433,7 +435,7 @@ function sheabel_customize_register($wp_customize){
             'priority' => 5
         ));
 
-        //FAQ answer #2
+        //FAQ answer #3
         $wp_customize->add_setting('faq_answer3', array(
             'default' => _x('Until decisions and preparations can be made, place your pet in the coldest part of your home.  Put plastic down and then newspaper or a blanket to place your pet on.  Cover with another towel or blanket.', 'sheabel-theme'),
             'type' => 'theme_mod'
@@ -446,15 +448,34 @@ function sheabel_customize_register($wp_customize){
             'priority' => 6
         ));
 
- 
- 
- 
- 
+        //FAQ question #4
+        $wp_customize->add_setting('faq_question4', array(
+            'default' => _x(' What is General Maintenance ', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
 
+        $wp_customize->add_control('faq_question4', array(
+            'label' => __('Question #4', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 7
+        ));
 
+        //FAQ answer #4
+        $wp_customize->add_setting('faq_answer4', array(
+            'default' => _x('General maintenance covers the basic operating expenses of Hartsdale Pet Cemetery. These expenses include but are not limited to grass cutting, leaf and snow removal, tree and path maintenance, purchase of tools and equipment to perform said maintenance as well as payment of salaries and employee benefits to the staff who perform the maintenance. ', 'sheabel-theme'),
+            'type' => 'theme_mod'
+        ));
+
+        $wp_customize->add_control('faq_answer4', array(
+            'type' => 'textarea',
+            'label' => __('Answer #4', 'sheabel-theme'),
+            'section' => 'faq',
+            'priority' => 8
+        ));
+
+ 
 }
 add_action('customize_register', 'sheabel_customize_register');
 
 
 
-?>

@@ -15,7 +15,7 @@ $api = esc_attr( get_option( 'input_api_key' ));
             </div>
             <div id="renderWeather">
                 <table>
-                    <tbody id="showWeather"></tbody>
+                    <tbody class="showWeather"></tbody>
                 </table>
             </div>
         </div>        
@@ -37,7 +37,7 @@ class Weather {
 		dataType:"jsonp",
 		success:function(data){
 			var widget = show(data);
-			jQuery("#showWeather").html(widget);
+			jQuery(".showWeather").html(widget);
 		}
 	    });
     }

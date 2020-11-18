@@ -10,7 +10,7 @@
     height: auto;
 }
 
-#history, #contact, #services {
+#history, #contact, #services, #faq {
 	background-attachment: fixed;
 	/* background-color: $primaryColor; */
 	width: 100%;

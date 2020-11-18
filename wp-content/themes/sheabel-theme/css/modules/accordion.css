@@ -1,0 +1,12 @@
+.card {
+    .card-header {
+        background-color:  $primaryColor;   
+        h2 {
+            button {
+                &.btn {
+                    color: $red;
+                }
+            }
+        }    
+    }
+}

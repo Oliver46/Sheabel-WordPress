@@ -82,11 +82,23 @@ function register_weather_stylesheet(){
 }
 
 //Add js/Jquery files
-add_action('admin_enqueue_scripts', 'register_scripts');
+add_action('wp_enqueue_scripts', 'register_scripts');
 
 //callable function in wich js/jquery will be registered
 function register_scripts(){
-    wp_enqueue_script('js_jquery.file', plugins_url('js_jquery.js', __FILE__));
+
+    $city = esc_attr( get_option( 'input_city' ));
+    $url = esc_attr( get_option( 'input_url' ));
+    $api = esc_attr( get_option( 'input_api_key' ));
+ 
+    wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
+    wp_enqueue_script('weatherAjax.file', plugins_url('weatherAjax.js', __FILE__));
+    wp_localize_script( 'weatherAjax.file', 'frontend_ajax_object',
+        array( 
+            'ajaxurl' => $city,
+            'city' => $url,
+            'apikey' => $api,
+        )
+    );
 }
 
-?>

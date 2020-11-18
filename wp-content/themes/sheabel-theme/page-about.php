@@ -20,6 +20,8 @@
     <?php
         endwhile;
         endif;
+        /* Restore original Post Data */
+        wp_reset_postdata();
     ?>
             
             <div class="container">

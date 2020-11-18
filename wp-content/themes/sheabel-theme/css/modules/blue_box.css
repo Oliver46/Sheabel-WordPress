@@ -7,15 +7,19 @@
     height: 100%;
     padding: 40px;
     color: white;
+
+    .bell {
+        padding: 20px;
+        color: $red;
+    }
+
+    .service-title {
+        color: $red;
+    }
+
+
 }
 
-.box-blue .service-title {
-    color: $red;
-}
 
 /* end blue box */
 
-.bell {
-    padding: 20px;
-    color: $red;
-}

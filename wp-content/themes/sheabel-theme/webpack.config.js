@@ -1,6 +1,6 @@
 /*
   SUPER IMPORTANT: This config assumes your theme folder is named
-  exactly 'fictional-university-theme' and that you have a folder
+  exactly 'sheabel-theme' and that you have a folder
   inside it named 'bundled-assets' - If you'd like to adapt this
   config to work with your own custom folder structure and names
   be sure to adjust the publicPath value on line #116. You do NOT
@@ -113,7 +113,7 @@ if (currentTask == "build" || currentTask == "buildWatch") {
   cssConfig.use.unshift(MiniCssExtractPlugin.loader)
   postCSSPlugins.push(require("cssnano"))
   config.output = {
-    publicPath: "/wp-content/themes/fictional-university-theme/bundled-assets/",
+    publicPath: "/wp-content/themes/sheabel-theme/bundled-assets/",
     filename: "[name].[chunkhash].js",
     chunkFilename: "[name].[chunkhash].js",
     path: path.resolve(__dirname, "bundled-assets")
