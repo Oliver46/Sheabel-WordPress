@@ -1,4 +1,6 @@
 <?php
+settings_errors();
+
 $city = esc_attr( get_option( 'input_city' ));
 $url = esc_attr( get_option( 'input_url' ));
 $api = esc_attr( get_option( 'input_api_key' ));
@@ -9,7 +11,7 @@ $api = esc_attr( get_option( 'input_api_key' ));
             <div class="social-form">
                 <form action="options.php" method="post">
                     <?php settings_fields( 'weather-settings-group' ); ?>
-                    <?php do_settings_sections( 'custom_weather_plugins_settings' ); ?>
+                    <?php do_settings_sections( 'custom_weather_plugins_settings' ); ?> <!-- id of the page where our information is store -->
                     <?php submit_button(); ?>
                 </form>
             </div>
@@ -20,6 +22,20 @@ $api = esc_attr( get_option( 'input_api_key' ));
             </div>
         </div>        
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script>
 
@@ -49,7 +65,6 @@ function show(data){
             "<tr><td class='weatherData'>Weather:</td><td>"+ data.weather[0].main +"</td><td rowspan='2'><img src='http://openweathermap.org/img/w/"+data.weather[0].icon+".png'></td></tr>"+
 			"<tr><td  class='weatherData'>Description:</td><td>"+ data.weather[0].description +"</td></tr>"+
 			"<tr><td  class='weatherData'>Temperature:</td><td>"+ Math.round(data.main.temp) +"&deg;F</td></tr>"+
-            // "<tr><td class='weatherData'>Pressure:</td><td>"+ data.main.pressure +"hPa</td></tr>"+
 			"<tr><td class='weatherData'>Humidity:</td><td>"+ data.main.humidity +"%</h4>"+
 			"<tr><td class='weatherData'>Min Temperature:</td><td>"+ Math.round(data.main.temp_min) +"&deg;F</td></tr>"+
 			"<tr><td class='weatherData'>Max Temperature:</td><td>"+ Math.round(data.main.temp_max) +"&deg;F</td></tr>"+

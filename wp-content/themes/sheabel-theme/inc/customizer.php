@@ -14,7 +14,7 @@ function sheabel_customize_register($wp_customize){
         'default' => _x('', 'sheabel-theme'),
         'type' => 'theme_mod'
     ));
-    //Create input field | It is asigned under a section and control
+    //Create input field | It is asigned to a section 
     $wp_customize->add_control('home_text', array(
         'type' => 'textarea',
         'label' => __('Home Page Paragraph', 'sheabel-theme'),
@@ -56,7 +56,7 @@ function sheabel_customize_register($wp_customize){
 
     //Extra Service title
     $wp_customize->add_setting('extra_service', array(
-        'default' => _x('(859)221-2222', 'sheabel-theme'),
+        'default' => _x('', 'sheabel-theme'),
         'type' => 'theme_mod'
     ));
 

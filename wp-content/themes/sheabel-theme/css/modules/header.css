@@ -46,4 +46,8 @@ ul.navbar-nav li a:hover {
     background-color: rgba(11,63,87,.97) !important;
 }
 
+div#wpadminbar {
+    position: fixed;
+}
+
 /* end Header */

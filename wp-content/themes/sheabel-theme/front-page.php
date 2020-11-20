@@ -113,7 +113,7 @@ endif; ?>
                                   <th id="day"><?php echo $day; ?></th><th id="date"><?php echo $date; ?></th>
                                 </tr>
                             </thead>
-                            <tbody id="showWeather">
+                            <tbody class="showWeather">
                                 <script>console.log(frontend_ajax_object);</script>
                             </tbody>
                         </table>    
